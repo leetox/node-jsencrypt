@@ -1,4 +1,11 @@
-var getRandomValues = require('get-random-values');
+//var getRandomValues = require('get-random-values');
+//随机数
+function getRandomValues(array) {
+	for (var i = 0, l = array.length; i < l; i++) {
+	array[i] = Math.floor(Math.random() * 256);
+	}
+	return array;
+}
 
 var hardLimit = 100,
     ellipsis = "\u2026",
@@ -2779,8 +2786,9 @@ ASN1.test = function () {
      * @name KJUR
      * @namespace kjur's class library name space
      */
-    if (typeof KJUR == "undefined" || !KJUR) KJUR = {};
+    //if (typeof KJUR == "undefined" || !KJUR) KJUR = {};
 
+	var KJUR = KJUR || {};
     /**
      * kjur's ASN.1 class library name space
      * <p>
